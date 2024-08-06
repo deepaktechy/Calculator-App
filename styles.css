@@ -1,0 +1,98 @@
+/* General styles for resetting margins, paddings, and setting default fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Using Montserrat font for a modern look */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Full-page container styling */
+.container {
+    width: 100%;
+    height: 100vh;
+    /* Background gradient for the whole page */
+    background: linear-gradient(135deg, #f8c291, #e55039);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Calculator box styling */
+.calculator {
+    background: #2d3436; /* Dark background for contrast */
+    padding: 30px;
+    border-radius: 15px;
+    /* Shadow for depth effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the input fields and buttons */
+.calculator form input {
+    border: 0;
+    outline: 0;
+    /* Buttons are now larger for easier clicking */
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    /* Adding shadow for 3D effect */
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.1), inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Transition for smooth hover effect */
+    transition: all 0.3s ease;
+    background: transparent;
+    /* Font size increased for better readability */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Hover effect for buttons */
+.calculator form input:hover {
+    /* Hover color and shadow change */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.2), inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Scale animation for hover */
+    transform: scale(1.05);
+}
+
+/* Display styling */
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Display input styling */
+form .display input {
+    /* Full width for the display */
+    width: 100%;
+    padding: 10px;
+    font-size: 40px;
+    border-radius: 10px;
+    background-color: #2d3436;
+    color: #fff;
+    border: 2px solid #6c5ce7; /* Purple border for a unique look */
+    box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.1), inset 3px 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: right;
+}
+
+/* Equal button specific styling */
+form input.equal {
+    width: calc(100% - 90px);
+    background-color: #6c5ce7; /* Distinct color for equal button */
+    color: #fff;
+}
+
+/* Operator button styling */
+form input.operator {
+    color: #ff7675; /* Different color for operator buttons */
+}
+
+/* Animation for button press */
+form input:active {
+    /* Slight scale and shadow effect on click */
+    transform: scale(0.98);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
